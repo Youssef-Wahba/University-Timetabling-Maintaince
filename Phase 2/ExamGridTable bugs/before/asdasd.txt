@@ -1,0 +1,37 @@
+class BlockGridCell extends ExamGridCell {
+            - TimeBlock iBlock = null;
+            + BlockGridCell(TimeBlock block) {
+                iBlock = block;
+            }
+            + String getBackground() {
+                return sBgColorNotAvailable;
+            }
+
+            + String getOnClick() {
+                return null;
+            }
+            
+            + String getId() {
+                return null;
+            }
+            
+            + String getTitle() {
+                return iBlock.getEventName()+" ("+iBlock.getEventType()+")";
+            }
+            
+            + String getName() {
+                return iBlock.getEventName();
+            }
+            
+            + String getRoomName() {
+                return iBlock.getEventType();
+            }
+            
+            + String getShortComment() {
+                return "";
+            }
+            
+            + String getShortCommentNoColors() {
+                return "";
+            }
+        }
